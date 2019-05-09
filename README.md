@@ -38,15 +38,15 @@ https://github.com/mozilla/geckodriver/releases
 6.　hover：鼠标移动到哪个控件上。  
 7.　keyboard：模拟键盘回车键，同时在data一栏输入enter。  
 8.　switchto：两种用法，一种是在data里面直接填url，这时会切换到指定的url，另外一种是直接切换到对应的标签页，在data栏输入文本类数字即可。注意第一次切换是从原来的页面切换到新打开的页面。  
-9.  close：关闭当前展示的页面。  
+9.　close：关闭当前展示的页面。  
 &emsp;&emsp;注意：在贷前反欺诈里点击查看，会打开第二个页面，但这时自动化工具仍在原来的页面上操作（此时浏览器展示的是第二个页面）。因此若需校验第二个页面的内容，需要先切换swtichto到第二个页面进行校验。  为了避免页面多开，需关闭close第二个页面；尽管第二个页面已经关闭，但是自动化工具仍停留在第二个页面上，因此还需要切换switchto回第一个页面。
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/switch.png)
-10.  print：打印详情，主要用于打印所使用的xpath定位到的控件数组。  
-11.  Debug：调试。  
-12.  file:添加从本地上传文件的功能。  
+10.　print：打印详情，主要用于打印所使用的xpath定位到的控件数组。  
+11.　Debug：调试。  
+12.　file:添加从本地上传文件的功能。  
 &emsp;&emsp;用法为：data一栏输入文件本地路径。
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/uploadfile.png)
-13.  addparam：location_value可以是参数的值，data是参数的名称，用于设置公共参数；location_value也可以是控件的xpath定位，对应data是从该控件下获取到的文本。引用方法同上。  
+13.　addparam：location_value可以是参数的值，data是参数的名称，用于设置公共参数；location_value也可以是控件的xpath定位，对应data是从该控件下获取到的文本。引用方法同上。  
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/addparam.png)
 &emsp;&emsp;第一个表格cases的function_name能调用第二个表格task sheet中的task，名称必须在task列表中存在（多个操作的集合）。
 
