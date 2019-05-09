@@ -5,7 +5,7 @@ readme markdown
 
 -	安装java，安装完成后CMD下输入java -version检查环境变量是否添加。
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/java.png)
--	本地安装的chrome（64位）或火狐版本与conf\webdriver中的driver匹配
+-	本地安装的chrome（64位）或火狐版本与conf\webdriver中的driver匹配  
 版本对应：https://blog.csdn.net/yaya_1q2w/article/details/80053316  
 如不匹配可到下列网址进行下载  
 http://chromedriver.storage.googleapis.com/index.html  
@@ -17,12 +17,11 @@ https://github.com/mozilla/geckodriver/releases
 # 二.用例文档说明：web_testcase.xlsx
 
 - case_name：用例的名称，必填，同一条用例case_name需要合并
-- category：不必填
+- category：非必填
 - action_name：必填，描述该步骤名称
-- location_type：寻找控件的方式，默认为xpath，并且尽量使用xpath相对路径以防版本改动后会提示找不到该控件。另外支持id，text。建议使用默认。
-如果对于一个xpath定位方法能匹配到两个控件，则使用xpath->2的方法，比如贷前-资产录入-人加车全要素下关于地址的定位方法，//li[@title='江苏']->2
-还有碰到一个操作页面下多个下拉框操作的，应该注意是否有div相互影响的问题，见
-“批量导入”操作。
+- location_type：寻找控件的方式，默认为xpath，并且尽量使用xpath相对路径以防版本改动后会提示找不到该控件。另外支持id，text。建议使用默认。  
+如果对于一个xpath定位方法能匹配到两个控件，则使用xpath->2的方法，比如贷前-资产录入-人加车全要素下关于地址的定位方法，//li[@title='江苏']->2  
+还有碰到一个操作页面下多个下拉框操作的，应该注意是否有div相互影响的问题，见“批量导入”操作。
 - function_name：支持的操作有：  
 1.　open：打开网址；  
 2.　input：清除原有字符内容，然后输入新字符。新字符在data一栏输入。  
