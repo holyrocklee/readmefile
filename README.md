@@ -22,13 +22,13 @@ https://github.com/mozilla/geckodriver/releases
 *************************************
 # 二.用例文档说明：web_testcase.xlsx
 
-- case_name：用例的名称，必填，同一条用例case_name需要合并
-- category：非必填
-- action_name：必填，描述该步骤名称
-- location_type：寻找控件的方式，默认为xpath，并且尽量使用xpath相对路径以防版本改动后会提示找不到该控件。另外支持id，text。建议使用默认。  
+- **case_name**：用例的名称，必填，同一条用例case_name需要合并
+- **category**：非必填
+- **action_name**：必填，描述该步骤名称
+- **location_type**：寻找控件的方式，默认为xpath，并且尽量使用xpath相对路径以防版本改动后会提示找不到该控件。另外支持id，text。建议使用默认。  
 &emsp;&emsp;如果对于一个xpath定位方法能匹配到两个控件，则使用xpath->2的方法，比如贷前-资产录入-人加车全要素下关于地址的定位方法，//li[@title='江苏']->2  
 &emsp;&emsp;还有碰到一个操作页面下多个下拉框操作的，应该注意是否有div相互影响的问题，见“批量导入”操作。
-- function_name：支持的操作有：  
+- **function_name**：支持的操作有：  
 1.　open：打开网址；  
 2.　input：清除原有字符内容，然后输入新字符。新字符在data一栏输入。  
 &emsp;&emsp;input方法还提供输入随机字符串的功能，在data一栏输入，格式为：random(1,2,3)  
@@ -56,18 +56,18 @@ https://github.com/mozilla/geckodriver/releases
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/addparam.png)
 &emsp;&emsp;第一个表格cases的function_name能调用第二个表格task sheet中的task，名称必须在task列表中存在（多个操作的集合）。
 
--	location_value：function_name为open时不填，其他为必填。寻找控件用到的值，xpath方式为xpath值，id方式为id值，text方式的值为"tagname:文字"。tagname为html标签，不到万不得已不要使用。  
+-	**location_value**：function_name为open时不填，其他为必填。寻找控件用到的值，xpath方式为xpath值，id方式为id值，text方式的值为"tagname:文字"。tagname为html标签，不到万不得已不要使用。  
 &emsp;&emsp;location_value还提供了如//span[contains(text(),'${name}')]的xpath定位方式；多用于下图校验某角色名在新建用户时是否存在，以及点击该角色名前的复选框，将其选中。
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/frame.png)
--	data：找到控件以后需要输入的内容或打开的网址。
--	wait：支持两种输入方式：
+-	**data**：找到控件以后需要输入的内容或打开的网址。
+-	**wait**：支持两种输入方式：
 1.	输入数字123，表示做完本条操作后等待的秒数为123s；
 2.	输入xpath，表示等待该控件显示出来；xpath同样支持参数调用。  
 &emsp;&emsp;注意：有下拉框的控件响应速度比较慢；有的操作完成后页面会自动刷新，因此上述操作的等待时间最好设置为2秒及以上。开发在改代码时响应也会很慢，注意心态不要爆炸。
--	author：用例作者
--	enabled：为0不执行该步骤，其他均执行
--	新增公共参数功能：新增第三个表格，名为parameters。里面有两个表头keys和values，表示公共参数及其值，主要用来存放需要被引用的电话号码及身份证号码等。用法为：${phone}，在tasks表格的data一栏中输入。
--	新增了给task传入参数的功能：
+-	**author**：用例作者
+-	**enabled**：为0不执行该步骤，其他均执行
+-	**新增公共参数功能**：新增第三个表格，名为parameters。里面有两个表头keys和values，表示公共参数及其值，主要用来存放需要被引用的电话号码及身份证号码等。用法为：${phone}，在tasks表格的data一栏中输入。
+-	**新增了给task传入参数的功能**：
 第一步：写task的时候，需要传入参数的步骤在data字段写以！开头的参数名称。一个task内的参数名称不能相同，如!name。不需要传入参数的直接写固定值。用法如下：
 ![](https://github.com/holyrocklee/readmefile/blob/master/images/!name.png)
 第二步：
@@ -86,14 +86,14 @@ https://github.com/mozilla/geckodriver/releases
 - 遇到错误多查看log日志。
 - 点击“搜索”、“提交”、“确认删除”、“确认上传”等提交表单操作，可能会加载的比较慢，建议设置2秒的等待时间，不然的话可能会出现表单还没提交成功，页面就刷新的情况，同时用例不会提示错误（比如删除操作）。
 - 关于用到的数据库语句：  
-1.查询账户余额：  
+**1.查询账户余额**：  
 SELECT balance FROM inf_account_balance_history ORDER BY entry_time DESC LIMIT 1  
 SELECT balance FROM inf_account_balance_history WHERE org_id=(SELECT org_id FROM inf_admin_organization WHERE org_name='${addinstitution}' )  
-2.查询资产编号：  
+**2.查询资产编号**：  
 SELECT assets_id FROM inf_preloan_assets_detail WHERE borrower_name='王二麻·买买提' ORDER BY update_time DESC LIMIT 1  
-3.查询主体简称：  
+**3.查询主体简称**：  
 SELECT short_name FROM gamma_rc.inf_financial_owner WHERE full_name='${fullname}'  
-4.#删除机构  
+**4.#删除机构**  
 DELETE FROM inf_admin_organization WHERE org_id IN ();  
 #删除机构下面的主体关联关系表  
 DELETE from inf_admin_organization_owner WHERE org_id IN ();  
