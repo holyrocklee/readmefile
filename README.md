@@ -1,5 +1,8 @@
-# readmefile
-[My Github](https://github.com/holyrocklee)
+# web自动化测试工具WebAutomation测试用例使用说明
+[The github page of Author](金鑫https://github.com/holyrocklee)
+*************************************
+# 项目介绍
+WebAutomation是一个基于java语言开发的自动化测试工具。本页面是web自动化测试用例使用说明，app自动化测试用例使用说明见[APP 自动化测试](罗诗婷https://github.com/holyrocklee)
 *************************************
 # 一.执行前提
 
