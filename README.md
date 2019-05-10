@@ -78,7 +78,7 @@ https://github.com/mozilla/geckodriver/releases
 **************************************
 # 三.执行结果
 
-- 命令提示符CMD下，会显示脚本运行的每一步，因此用例出错后，可以到命令提示符环境下查看相应的出错提示，也可以进入伽马构建记录页面http://118.190.91.189:5021/#/ 查看相应的提示。
+- 命令提示符CMD下，会显示脚本运行的每一步，因此用例出错后，可以到命令提示符环境下查看相应的出错提示，也可以到log文件夹下查看info.log等日志文件，还可以进入伽马构建记录页面http://118.190.91.189:5021/#/ 查看相应的提示。
 **************************************
 # 四.用例说明
 
@@ -93,7 +93,8 @@ SELECT balance FROM inf_account_balance_history WHERE org_id=(SELECT org_id FROM
 SELECT assets_id FROM inf_preloan_assets_detail WHERE borrower_name='王二麻·买买提' ORDER BY update_time DESC LIMIT 1  
 **3.查询主体简称**：  
 SELECT short_name FROM gamma_rc.inf_financial_owner WHERE full_name='${fullname}'  
-**4.#删除机构**  
+**4.删除机构相关的表格**  
+#删除机构
 DELETE FROM inf_admin_organization WHERE org_id IN ();  
 #删除机构下面的主体关联关系表  
 DELETE from inf_admin_organization_owner WHERE org_id IN ();  
