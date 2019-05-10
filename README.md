@@ -2,7 +2,7 @@
 [作者Gihub主页](https://github.com/holyrocklee)
 *************************************
 # 项目介绍
-WebAutomation是一个基于java语言开发的自动化测试工具。本页面是web自动化测试用例使用说明，app自动化测试用例使用说明见[APP 自动化测试](罗https://github.com/holyrocklee)
+WebAutomation是一个基于java语言开发的自动化测试工具。本页面是web自动化测试用例使用说明，app自动化测试用例使用说明见[APP自动化测试](https://github.com/holyrocklee)
 *************************************
 # 一.执行前提
 
