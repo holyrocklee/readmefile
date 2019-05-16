@@ -10,7 +10,8 @@ WebAutomation是一个基于java语言开发的自动化测试工具。本页面
 # 一.执行前提
 
 -	安装java，安装完成后CMD下输入java -version检查环境变量是否添加。
-![](https://github.com/holyrocklee/readmefile/blob/master/images/java.png)
+
+![](https://github.com/holyrocklee/readmefile/blob/master/images/.png)
 -	本地安装的chrome（64位）或火狐版本与conf\webdriver中的driver匹配  
 版本对应：https://blog.csdn.net/yaya_1q2w/article/details/80053316  
 如不匹配可到下列网址进行下载  
