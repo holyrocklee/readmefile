@@ -1,8 +1,8 @@
-# web自动化测试工具WebAutomation测试用例使用说明
+# 6.22-6.24新员工周报
 
-| 作者 | 个人邮箱 | 个人主页 |
+| 报告人 | 个人邮箱 | 个人主页 |
 | ------ | ------ | ------ |
-| xjin | xjin@che300.com | [Github主页](https://github.com/holyrocklee) |
+| 李成星 | lichengxing5@huawei.com | [博客主页](https://github.com/holyrocklee) |
 *************************************
 # 项目介绍
 WebAutomation是一个基于java语言开发的自动化测试工具。本页面是web自动化测试用例使用说明，app自动化测试用例使用说明见[APP自动化测试](https://github.com/holyrocklee)
